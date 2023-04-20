@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%- include('partials/head.ejs') %>
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <p class="text-center text-uppercase title fw-bold">Name My Pet</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="logoSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <img class="logo" src="/img/nmp-logo-3.png" alt="logo del website">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="optionSection">
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <p class="fw-medium h1 mb-3">Choose one</p>
+                        <div class="cardAnimal shadow-sm perro mb-3 p-3" id="cardPerro">
+                            <img src="/img/perro.png" alt="Imagen de perro" class="imgPerro">
+                            <p>Is your dog big or little? Tell me about</p>
+                        </div>
+                        <div class="cardAnimal shadow-sm gato p-3 mb-3" id="cardGato">
+                            <img src="/img/gato.png" alt="Imagen de un gato" class="imgGato">
+                            <p>No way! Your cat loves take a shower!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                        <button type="button" class="btn btn-warning btn-lg rounded-pill btn-gen disabled mb-3"
+                            id="btnGen">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--footer-->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

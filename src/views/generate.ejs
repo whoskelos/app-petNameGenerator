@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Name generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%- include('partials/head.ejs') %>
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <p class="title fw-bold">How it works?</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="howWorksSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-start">
+                        <video src="" id="video" width="100%" controls></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promptArea">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <p class="h4 fw-bold" id="prompTitle">Tell me about your</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <textarea autofocus id="textPrompt" name="promptGpt" class="form-control" id="prompt" cols="40" rows="1"></textarea>
+                        <img src="/img/lupa.png" alt="lupa" width="40" id="btnSearch">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="answersArea">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <p class="h4 fw-bold">Check this out</p>
+                        <div id="divNames" class="divResponse" width="100%">1.Hola 2.Mundo 3.Adios</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- place footer here -->
+
+
+    <script src="/js/generate.js"></script>
+</body>
+
+</html>

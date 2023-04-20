@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+body {
+    font-family: "Fredoka", sans-serif !important;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.logo {
+    width: 350px;
+}
+
+.cardAnimal {
+    background: #fac710b6;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    border-radius: 10px;
+}
+.cardAnimal img {
+    width: 20%;
+}
+
+.cardAnimal:hover {
+    cursor: pointer;
+}
+
+.btn-gen {
+    background: #fac710 !important;
+}
+
+.answers {
+    border: 4px solid rgba(0,0,0,.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* boton seleccionado de perro o gato */
+.selected {
+    border: 2px solid #000000;
+}
+
+#video {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.divResponse {
+    background-color: #ffedad;
+    width: 100% !important;
+    height: 50px;
+    /* text-align: center !important; */
+}
