@@ -11,6 +11,11 @@ body {
     width: 350px;
 }
 
+.logo-search {
+    max-width: 40px !important;
+    height: 40px !important;
+}
+
 .cardAnimal {
     background: #fac710b6;
     display: flex;
