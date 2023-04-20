@@ -7,7 +7,6 @@ onload = () => {
     document
         .querySelector("#btnSearch")
         .addEventListener("click", generateNames);
-    test();
 };
 
 const cargarPrompt = (animal) => {
@@ -29,7 +28,7 @@ const generateNames = () => {
         console.log("Describe your pet please!");
     } else {
         console.log(textPrompt);
-        document.getElementById("divNames").classList.add("answers");
+        document.getElementById("loader").classList.add("answers");
         fetch("/message", {
             method: "POST",
             headers: {
@@ -43,8 +42,24 @@ const generateNames = () => {
 };
 
 const showNames = (names) => {
-    //separar las palabras y hacer una tarjeta por cada nombre
-    document.getElementById("divNames").classList.remove("answers");
-    document.querySelector("#divNames").innerHTML = names.message;
+    //selecciono div donde voy a crear las tarjetas de las respuestas
+    const divAnswers = document.getElementById("divNames");
+    //quito el spin del loading de la peticion
+    document.getElementById("loader").remove();
+    const response = names.message;
+    //separo las respuestas para hacer una tarjeta por cada una de ellas
+    const words = response.split(".");
+
+    //creo el div donde van a ir las cards
+    const $cards = document.createElement("div");
+    
+    for (let i = 1; i < words.length; i++) {
+        $cards.innerHTML += `<div class="cardAnswer justify-content-between justify-content-md-around shadow-sm mb-3 p-3">
+            <img src="/img/${animal}.png" alt="Imagen de ${animal}">
+            <p class="fs-4">${words[i]}</p>
+        </div>`;
+    }
+    divAnswers.append($cards);
+    
 };
 

@@ -18,6 +18,18 @@ body {
     align-items: end;
     border-radius: 10px;
 }
+
+.cardAnswer {
+    background: #fac710b6;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cardAnswer img {
+    width: 20%;
+}
+
 .cardAnimal img {
     width: 20%;
 }
@@ -57,11 +69,4 @@ body {
 #video {
     width: 100% !important;
     height: auto !important;
-}
-
-.divResponse {
-    background-color: #ffedad;
-    width: 100% !important;
-    height: 50px;
-    /* text-align: center !important; */
 }
