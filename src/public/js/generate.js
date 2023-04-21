@@ -17,7 +17,7 @@ const cargarPrompt = (animal) => {
 };
 
 const generateNames = () => {
-    regexPrompt = /(Tell me three names for my) (dog|cat)+[a-z ]/i;
+    regexPrompt = /(Tell me three names for my) (dog|cat)+([, ]||[a-z ])/i;
     const textPrompt = document.querySelector("#textPrompt").value.trim();
     const prompt = {
         description: textPrompt,
