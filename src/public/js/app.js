@@ -2,7 +2,6 @@ var perro = false;
 var gato = false;
 var animal;
 onload = () => {
-    console.log("funciono");
     document.getElementById("cardPerro").addEventListener("click", (e) => {
         selectAnimal(e);
     });
@@ -14,19 +13,21 @@ onload = () => {
 const selectAnimal = (e) => {
     const cardAnimal = e.currentTarget;
     if (cardAnimal.classList.contains("perro")) {
-        console.log("es un perro");
         animal = "dog";
         perro = true;
         gato = false;
         checkSelection();
     } else if (cardAnimal.classList.contains("gato")) {
-        console.log("es un gato");
         animal = "cat";
         gato = true;
         perro = false;
         checkSelection();
     } else {
-        console.log("No ha seleccionado nada");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+        })
     }
 };
 
