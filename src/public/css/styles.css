@@ -75,3 +75,11 @@ body {
     width: 100% !important;
     height: auto !important;
 }
+
+.padre {
+    min-height: 100vh !important;
+}
+
+.hijo-2 {
+    margin-top: auto !important;
+}
